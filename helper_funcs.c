@@ -40,3 +40,19 @@ char* (*get_format_func(char format_char))(va_list)
 
 	return (NULL);
 }
+
+/**
+ * check_buffer - if buffer space is filled it writes to stdout and resets it
+ * @buffer: Buffer to check
+ * @buffer_pos: to indicate the point filled to
+ * Return: buffer position
+ */
+int check_buffer(char* buffer, int buffer_pos)
+{
+	if (buffer_pos > 1020)
+	{
+		write(1, buffer, buffer_pos);
+		buffer_pos = 0;
+	}
+	return (buffer_pos);
+}
