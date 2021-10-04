@@ -4,5 +4,9 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/* helper functions */
+void* create_buffer(int buffer_size);
+char* (*get_format_func(char format_char))(va_list);
+int check_buffer(char* buffer, int buffer_pos);
 
 #endif
