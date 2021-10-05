@@ -19,10 +19,12 @@
 ### Description of files
 ```
 print.c ---------------------------- holds custom _printf function
-handle_s.c --------------------------- handles %s to print a string of characters
-handle_c.c ----------------------------- handles %c to print a single character
+handle_s.c ------------------------- handles %s to print a string of characters
+handle_c.c ------------------------- handles %c to print a single character
 handle_d.c ------------------------- handles %d and %i to print (d)ecimal/(i)ntegers in base 10
-helper_funcs.c --------------------- holds functions that create and write buffer, get approriate function to handle format, find string length ...
+helper_funcs.c --------------------- holds function that gets approriate function to handle format conversion character
+string_funcs.c --------------------- holds functions to find string length, copy string ...
+buffer_funcs.c --------------------- holds prototypes of functions to create and write buffer, and check buffer to prevent overflow.
 main.h ----------------------------- holds prototypes of functions spread across all files
 ```
 
