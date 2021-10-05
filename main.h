@@ -16,6 +16,6 @@ int _strlen(char *s);
 char *handle_c(va_list list);
 char *handle_s(va_list list);
 char *handle_d(va_list list);
-char *itob(va_list list);
+char *itos(va_list list);
 
 #endif
