@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	char *buffer, *str;
 	char* (*f)(va_list);
 	va_list args;
+
 	buffer_size = 1024;
 	buffer_pos = 0;
 	i = 0;
@@ -55,7 +56,7 @@ int _printf(const char *format, ...)
 				if (f == NULL)
 				{
 					buffer_pos = check_buffer\
-						(buffer,buffer_pos);
+						(buffer, buffer_pos);
 					buffer[buffer_pos++] = '%';
 					total_bytes++;
 					buffer[buffer_pos++] = format[i];
