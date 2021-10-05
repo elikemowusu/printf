@@ -42,7 +42,7 @@ Ready features here:
 
 ## Setup
 On ubuntu and using gcc:
-`(terminal)$ git clone https://github.com/MelissaN/printf.git`
+`(terminal)$ git clone https://github.com/elikemowusu/printf.git`
 `(terminal)$ cd printf`
 
 ## Usage
