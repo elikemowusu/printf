@@ -84,7 +84,7 @@ int _printf(const char *format, ...)
 							(buffer, buffer_pos);
 						buffer[buffer_pos++] = str[j];
 						total_bytes++;
-						
+						j++;
 					}
 					free(str);
 				}
