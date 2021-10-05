@@ -7,6 +7,7 @@
 > by interpolation of data of different types. 
 
 ## Table of Contents
+* [Description of files](#description-of-files)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Setup](#setup)
@@ -16,6 +17,15 @@
 * [Acknowledgements](#acknowledgements)
 * [Authors](#authors)
 
+### Description of files
+```
+print.c ---------------------------- holds custom _printf function
+handle_s.c --------------------------- handles %s to print a string of characters
+handle_c.c ----------------------------- handles %c to print a single character
+handle_d.c ------------------------- handles %d and %i to print (d)ecimal/(i)ntegers in base 10
+helper_funcs.c --------------------- holds functions that create and write buffer, get approriate function to handle format, find string length ... 
+main.h ----------------------------- holds prototypes of functions spread across all files
+```
 
 ## Technologies Used
 - C programming language
