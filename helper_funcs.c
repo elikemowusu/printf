@@ -7,11 +7,11 @@
  */
 void* create_buffer(int buffer_size)
 {
-	char* buff;
-	buff = malloc(buffer_size);
-	if (buff == NULL)
-		return (NULL);
-	return (buff);
+char* buff;
+buff = malloc(buffer_size);
+if (buff == NULL)
+return (NULL);
+return (buff);
 }
 
 /**
@@ -21,24 +21,24 @@ void* create_buffer(int buffer_size)
  */
 char* (*get_format_func(char format_char))(va_list)
 {
-	int i = 0;
+int i = 0;
 
-	format_object arr[] = {
-		{'c', handle_c},
-		{'s', handle_s},
-		{'d', handle_d},
-		{'i', handle_d},
-		{'\0', NULL}
-	};
+format_object arr[] = {
+{'c', handle_c},
+{'s', handle_s},
+{'d', handle_d},
+{'i', handle_d},
+{'\0', NULL}
+};
 
-	while (arr[i].format_char != '\0')
-	{
-		if (arr[i].format_char == format_char)
-			return (arr[i].func);
-		i++;
-	}
+while (arr[i].format_char != '\0')
+{
+if (arr[i].format_char == format_char)
+return (arr[i].func);
+i++;
+}
 
-	return (NULL);
+return (NULL);
 }
 
 /**
@@ -49,12 +49,12 @@ char* (*get_format_func(char format_char))(va_list)
  */
 int check_buffer(char* buffer, int buffer_pos)
 {
-	if (buffer_pos > 1020)
-	{
-		write(1, buffer, buffer_pos);
-		buffer_pos = 0;
-	}
-	return (buffer_pos);
+if (buffer_pos > 1020)
+{
+write(1, buffer, buffer_pos);
+buffer_pos = 0;
+}
+return (buffer_pos);
 }
 
 /**
@@ -65,10 +65,45 @@ int check_buffer(char* buffer, int buffer_pos)
  */
 void write_buffer(char *buffer, int len, va_list list)
 {
-	char *buff;
+char *buff;
 
-	buff = realloc(buffer, len); /* realloc to correct size */
-	write(1, buff, len); /* print */
+buff = realloc(buffer, len); /* realloc to correct size */
+write(1, buff, len); /* print */
 
-	free(buff); va_end(list);
+free(buff); va_end(list);
+}
+
+/**
+ * _strcpy - Copies information from each element
+ * @dest: destination file
+ * @src: source file
+ * Return: array
+ */
+char *_strcpy(char *dest, char *src)
+{
+int i = 0;
+
+while (src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+
+dest[i] = src[i];
+return (dest);
+}
+
+/**
+ * _strlen - prints length string in integer
+ * @s: string passed to function
+ * Return: a
+ */
+int _strlen(char *s)
+{
+int i = 0;
+
+while (*(s + i))
+i++;
+
+return (i);
 }
