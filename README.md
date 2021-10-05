@@ -1,12 +1,12 @@
-# printf 
+# printf
 > We created a mini version of **C** `printf`.
- 
-> `printf` is found in the `stdio.h` library. 
 
-> The function allows to print formatted strings
-> by interpolation of data of different types. 
+> `printf` is found in the `stdio.h` library.
+
+> The function allows to print formatted strings by interpolation of data of different types.
 
 ## Table of Contents
+* [Description of files](#description-of-files)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Setup](#setup)
@@ -16,6 +16,17 @@
 * [Acknowledgements](#acknowledgements)
 * [Authors](#authors)
 
+### Description of files
+```
+print.c ---------------------------- holds custom _printf function
+handle_s.c ------------------------- handles %s to print a string of characters
+handle_c.c ------------------------- handles %c to print a single character
+handle_d.c ------------------------- handles %d and %i to print (d)ecimal/(i)ntegers in base 10
+helper_funcs.c --------------------- holds function that gets approriate function to handle format conversion character
+string_funcs.c --------------------- holds functions to find string length, copy string ...
+buffer_funcs.c --------------------- holds prototypes of functions to create and write buffer, and check buffer to prevent overflow.
+main.h ----------------------------- holds prototypes of functions spread across all files
+```
 
 ## Technologies Used
 - C programming language
@@ -31,7 +42,7 @@ Ready features here:
 
 ## Setup
 On ubuntu and using gcc:
-`(terminal)$ git clone https://github.com/MelissaN/printf.git`
+`(terminal)$ git clone https://github.com/elikemowusu/printf.git`
 `(terminal)$ cd printf`
 
 ## Usage
@@ -73,5 +84,5 @@ To do:
 
 
 ## Authors
-Derrick Owusu [@elikemowusu](https://github.com/elikemowusu) 
+Derrick Owusu [@elikemowusu](https://github.com/elikemowusu)
 && Gideon Quainoo [@sequainoo](https://github.com/sequainoo)
