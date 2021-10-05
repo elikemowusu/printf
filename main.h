@@ -19,4 +19,16 @@ char *handle_s(va_list list);
 char *handle_d(va_list list);
 char *itob(va_list list);
 
+/**
+ * struct format - struct
+ * @format_char: conversion character of format specifier
+ * @func: ptr to functions that print according to identifier (e.g. print_c)
+ */
+
+typedef struct format
+{
+	char format_char;
+	char *(*func)(va_list);
+} format_object;
+
 #endif
