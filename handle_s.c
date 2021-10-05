@@ -5,10 +5,10 @@
  * @args: a list of arguments to select string from
  * Return: string
  */
-char* handle_s(va_list args)
+char *handle_s(va_list args)
 {
-	char* str;
-	char* buff;
+	char *str;
+	char *buff;
 	int len;
 
 	str = va_arg(args, char*);

@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 /* helper functions */
-void* create_buffer(int buffer_size);
-char* (*get_format_func(char format_char))(va_list);
-int check_buffer(char* buffer, int buffer_pos);
+void *create_buffer(int buffer_size);
+char * (*get_format_func(char format_char))(va_list);
+int check_buffer(char *buffer, int buffer_pos);
 void write_buffer(char *buffer, int len, va_list list);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
@@ -29,6 +29,6 @@ typedef struct format
 {
 	char format_char;
 	char* (*func)(va_list);
-}format_object;
+} format_object;
 
 #endif
