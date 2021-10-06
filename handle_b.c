@@ -1,39 +1,49 @@
 #include "main.h"
 
-char *itob(va_list args)
-{
-	char *buff;
-	int integer, tmp, j, twos;
+/**
+ * itob - change int to binary
+ * @list: int to change
+ * Return: string with binary
+ */
 
-	integer = va_arg(args, int);
-	tmp = integer;
-	j = 0;
-	twos = 1;
-	buff = malloc(sizeof (char) * 33);
-	if (buff == NULL)
+char *itob(va_list list)
+{
+	int j = 0, twos = 1;
+	int i, k;
+	char *s;
+
+	k = va_arg(list, int);
+	i = k;
+
+	/* malloc up to max int in binary */
+	s = malloc(sizeof(char) * 33);
+	if (s == NULL)
 		return (NULL);
 
-	if (integer < 0)
+	/* account for negative numbers with '1' at index 0 */
+	if (k < 0)
 	{
-		buff[0] = '-';
-		integer *= -1;
-		tmp *= -1;
+		s[0] = 1 + '0';
 		j++;
+		k *= -1;
+		i *= -1;
 	}
 
-	while (tmp > 1)
+	/* find biggest power of 2 it's divisible by */
+	while (k > 1)
 	{
-		tmp /= 2;
+		k /= 2;
 		twos *= 2;
 	}
 
-	while (twos >= 1)
+	/* divide down and store binary num */
+	while (twos > 0)
 	{
-		buff[j++] = ( integer / twos) + '0';
-		integer %= twos;
+		s[j++] = (i / twos + '0');
+		i %= twos;
 		twos /= 2;
 	}
-	buff[j] = '\0';
+	s[j] = '\0';
 
-	return (buff);
+	return (s);
 }
