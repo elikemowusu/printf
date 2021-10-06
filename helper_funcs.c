@@ -14,6 +14,7 @@ char* (*get_format_func(char format_char))(va_list)
 		{'s', handle_s},
 		{'d', handle_d},
 		{'i', handle_d},
+		{'b', itob},
 		{'\0', NULL}
 	};
 
