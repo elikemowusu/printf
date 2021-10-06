@@ -30,7 +30,7 @@ char *rev_string(va_list list);
  * @func: ptr to functions that print according to identifier (e.g. print_c)
  */
 
-	typedef struct format
+typedef struct format
 {
 	char format_char;
 	char *(*func)(va_list);

@@ -14,7 +14,7 @@ char *rev_string(va_list list)
 
 	str = va_arg(list, char *); /* store argument to access only once */
 	if (str == NULL)
-		str = ")llun(";
+		str = "";
 
 	len = _strlen(str);
 
