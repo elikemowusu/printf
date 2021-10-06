@@ -18,6 +18,7 @@ char* (*get_format_func(char format_char))(va_list)
 		{'o', itoOctal},
 		{'u', handle_u},
 		{'r', rev_string},
+		{'R', rot13},
 		{'\0', NULL}
 	};
 

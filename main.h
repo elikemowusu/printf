@@ -23,6 +23,7 @@ char *itoOctal(va_list list);
 char *_utos(int div, int length, int n);
 char *handle_u(va_list list);
 char *rev_string(va_list list);
+char *rot13(va_list list);
 
 /**
  * struct format - struct
