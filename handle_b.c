@@ -16,8 +16,6 @@ char *itob(va_list args)
 	if (integer < 0)
 	{
 		buff[0] = '1';
-		integer *= -1;
-		tmp *= -1;
 		j++;
 	}
 
