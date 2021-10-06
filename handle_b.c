@@ -9,15 +9,13 @@ char *itob(va_list args)
 	tmp = integer;
 	j = 0;
 	twos = 1;
-	buff = malloc(sizeof (char) * 33);
+	buff = malloc(sizeof (char) * 34);
 	if (buff == NULL)
 		return (NULL);
 
 	if (integer < 0)
 	{
-		buff[0] = '-';
-		integer *= -1;
-		tmp *= -1;
+		buff[0] = '1';
 		j++;
 	}
 

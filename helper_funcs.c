@@ -15,6 +15,9 @@ char* (*get_format_func(char format_char))(va_list)
 		{'d', handle_d},
 		{'i', handle_d},
 		{'b', itob},
+		{'o', itoOctal},
+		{'u', handle_u},
+		{'r', rev_string},
 		{'\0', NULL}
 	};
 

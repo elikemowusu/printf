@@ -19,6 +19,10 @@ char *handle_s(va_list list);
 char *handle_d(va_list list);
 char *itos(va_list list);
 char *itob(va_list list);
+char *itoOctal(va_list list);
+char *_utos(int div, int length, int n);
+char *handle_u(va_list list);
+char *rev_string(va_list list);
 
 /**
  * struct format - struct
@@ -26,7 +30,7 @@ char *itob(va_list list);
  * @func: ptr to functions that print according to identifier (e.g. print_c)
  */
 
-typedef struct format
+	typedef struct format
 {
 	char format_char;
 	char *(*func)(va_list);
